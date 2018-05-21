@@ -1,0 +1,23 @@
+<h1>{{ editMode ? "Edit post" : "New post"}}</h1>
+<form *ngIf="postForm" [formGroup]="postForm" class="form-group" (ngSubmit)="onSubmit()">
+    <!--<div class="row form-group">
+        <label for="userId">User</label>
+        <select class="form-control" name="userId" id="userId" formControlName="userId">
+            <option *ngFor="let user of users;" [value]="user.id">{{user.name}}</option>
+        </select>
+    </div>-->
+    <div class="row">
+        <label for="title">Title</label>
+        <input id="title" type="text" formControlName="title" class="form-control">
+    </div>
+    <div class="row">
+        <label for="content">Content</label>
+        <input id="content" type="content" formControlName="content" class="form-control">
+    </div>
+    <hr>
+    <div class="row" class="">
+        <button type="submit" class="btn btn-success" [disabled]="!postForm.valid">Save</button>
+        <button type="button" class="btn btn-primary" (click)="onCancel()">Cancel</button>
+        <button *ngIf="editMode" type="button" class="btn btn-danger" (click)="onDelete()">Delete</button>
+    </div>
+</form>

@@ -1,0 +1,11 @@
+<div *ngIf='comments && comments.length > 0'>
+        <p>Comments:</p>
+        <ul class="list-group">
+                <li
+                  class="list-group-item"
+                  *ngFor="let comment of comments">
+                  {{ comment.content }} - {{ comment.user.name }} - {{comment.dateTime}}
+                </li>
+        </ul>
+</div>
+<p *ngIf="comments && comments.length === 0">There are no comments</p>

@@ -1,0 +1,11 @@
+<p *ngIf="!posts"><em>Loading...</em></p>
+<a [routerLink]="['new']" class="btn btn-primary">New Post</a>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+      <post-item
+        *ngFor="let post of posts;"
+        [post]="post">
+      </post-item>
+    </div>
+</div>

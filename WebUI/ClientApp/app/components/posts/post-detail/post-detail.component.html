@@ -1,0 +1,18 @@
+<div *ngIf='post && user'>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{post.title}}</h3>
+                by
+                <strong>{{user.name}}</strong>
+                <a *ngIf="authService.isAuthenticated() && authService.getUser().id === post.userId" [routerLink]="['edit']">Edit</a>
+            </div>
+            <div class="panel-body">{{post.content}}</div>
+        </div>
+    </div>
+    <div class="row">
+        <post-comments>
+
+        </post-comments>
+    </div>
+</div>

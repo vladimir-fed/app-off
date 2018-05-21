@@ -1,0 +1,28 @@
+[
+  {
+    "name": "firstUser",
+    "username": "first",
+    "passwordText": "default", 
+    "posts": [
+      {
+        "title": "firstPost",
+        "content": "firstContent"
+      },
+      {
+        "title": "secondPost",
+        "content": "secondtContent"
+      }
+    ]
+  },
+  {
+    "name": "secondUser",
+    "username": "second",
+    "passwordText": "default",
+    "posts": [
+      {
+        "title": "thirdPost",
+        "content": "thirdContent"
+      }
+    ]
+  }
+]
